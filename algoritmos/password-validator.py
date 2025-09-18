@@ -1,4 +1,4 @@
-#password validator (8 digits+, mix:caps,noncaps,simbols)
+#password validator (8 digits+, mix:caps,noncaps,simbols,numbers)
 import re
 
 ent = input("digite uma senha: ")

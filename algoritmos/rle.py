@@ -1,7 +1,6 @@
 from collections import Counter
 
 ent = Counter(input("digite o texto: ").upper())
-print(Counter(ent))
 final = ""
 
 for c in ent:

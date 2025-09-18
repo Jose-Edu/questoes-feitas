@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    
+</head>
+<body>
+
+    <!-- Questão treino: Crie uma página HTML que exiba um contador, um botão '+' e um botão '-';
+        O contador deve exibir um número iniciado em zero, sendo alterado em +1 e -1 pelos botões.
+      -->
+    <script>
+        let c = 0;
+
+        function update() {
+            document.getElementById("counter").outerHTML = `<p id="counter">${c}</p>`;
+        }
+
+        function plus() {
+            c++;
+            update();
+        }
+
+        function minus() {
+            c--;
+            update();
+        }
+
+    </script>
+
+    <p id="counter">0</p>
+    <button id="m" type="button">-</button>
+    <button id="p" type="button">+</button>
+
+    <script>
+        document.getElementById("m").addEventListener("click", minus);
+        document.getElementById("p").addEventListener("click", plus);
+    </script>
+
+</body>
+</html>

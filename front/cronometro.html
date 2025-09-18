@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronometro</title>
+</head>
+<body>
+
+    <script>
+
+        let time = new Date();
+        resetTime();
+        let isOn = false;
+
+        function start() {
+            resetTime();
+            isOn = true;
+            update();
+        }
+
+        function pause() {
+            isOn = isOn ? false : true;
+            update();
+        }
+
+        function stop() {
+            isOn = false;
+            resetTime();
+            update();
+        }
+
+        function resetTime() {
+            time.setHours(0,0,0,0);
+        }
+
+        function update() {
+            document.getElementById('counter').innerHTML=`<p id="counter">${time.getHours()+':'+time.getMinutes()+':'+time.getSeconds()+':'+time.getMilliseconds()}</p>`
+        }
+
+    </script>
+
+    <p id="counter">0</p>
+
+    <div>
+        <button id="start">start</button>
+        <button id="pause">pause</button>
+        <button id="stop">stop</button>
+    </div>
+
+    <script>
+        document.getElementById('start').addEventListener("click", start);
+        document.getElementById('pause').addEventListener("click", pause);
+        document.getElementById('stop').addEventListener("click", stop);
+        update();
+        setInterval(() => {
+            if (isOn) {
+                time.setMilliseconds(time.getMilliseconds()+10);
+                update();
+            };
+        }, 10);
+    </script>
+
+</body>
+</html>

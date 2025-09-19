@@ -19,3 +19,5 @@ Observação: As respostas dos Algoritimos estão todas realizadas em Python!
 * senha (2ª rinha): Crie um algoritmo que receba uma string e retorne se ela é uma senha válida para os seguintes parâmentros: Possui 11 digitos e termina e 'A';
 
 * rle (2ª rinha): Crie um programa que receba uma string e retorne ela encriptada em RLE. RLE consiste em resumir o texto ao número de aprições de cada letra, exibindo o número em caso de mais de uma ocorrência. Exemplo: "abacate" > "3ABCTE";
+
+* somar-algarismos (2ª rinha): Crie um programa que receba um número e some seus algarismos até sobrar um número de um dígito e retorne-o. Exemplo: 14 => 5, 123 => 6, 99 => 18 => 9
